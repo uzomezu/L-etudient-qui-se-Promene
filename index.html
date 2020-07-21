@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <!-- Bootstrap Min -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Fontawesome JS -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>L'etudiant qui se promene - Gallery of Kevin Mezu</title>
+  </head>
+  <body class="d-flex justify-content-center align-items-center">
+    <div class="overlay mx-auto"></div>
+    <div class="menu-btn">
+      <div class="menu-btn-burger"></div>
+    </div>
+    <div class="card" style="max-width: 24rem; margin: 0;">
+      <img
+        src="./KM_Logo.png"
+        alt="profile-pic"
+        class="card-img-top"
+        id="img-top"
+      />
+
+      <div class="card-body">
+        <h5 class="card-title">Kevin Mezu</h5>
+        <p class="card-text">
+          My name is Kevin! I study in the department of Computer Studies at
+          UMGC with a 3.5 GPA. I expect to graduate in Fall 2020 with a BS in
+          Digital Media and Web Technology.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <!-- <li id="skills-tab" class="list-group-item d-flex">
+          <div>Skills and Tech:</div>
+          <i class="fab fa-js-square"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-less"></i>
+          <div>Rest API/Web API</div>
+        </li> -->
+        <li class="list-group-item">
+          Interests: Health, Cloud Computing, Wearable Tech
+        </li>
+        <li class="list-group-item d-flex justify-content-center">
+          <a id="windows-button" href="#" class="card-link"
+            ><img src="./photos/Windows_Logo_1995.svg" alt="" /> Projects</a
+          >
+          <button id="supreme-button" href="#" class="gallery card-link">
+            Gallery
+          </button>
+          <a href="#" class="card-link">About Me -></a>
+        </li>
+        <li class="list-group-item d-flex justify-content-center social-box">
+          <a id="linkedin" href="#"><i class="fa fa-linkedin-square"></i></a>
+          <a id="github" href="#"><i class="fa fa-github"></i></a>
+          <a id="twitter" href="#"><i class="fa fa-twitter"></i></a>
+          <a id="youtube" href="#"><i class="fa fa-youtube-play"></i></a>
+          <a id="mail" href="mailto:kmezu1@student.umgc.edu"
+            ><i class="fa fa-envelope"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <footer></footer>
+    <script src="js/indexUI.js"></script>
+    <script type="text/javascript">
+      (function () {
+        var img = document.getElementById("img-top");
+        img.onload = function () {
+          if (img.height > img.width) {
+            img.height = "100%";
+            img.width = "auto";
+          }
+        };
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "supreme";
+  src: url("../fonts/SupremeFont.ttf") format("truetype");
+}
+body {
+  background-color: teal;
+  color: #323232;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.profile-pic {
+  width: 100%;
+  height: 100px;
+  > img {
+    width: 100%;
+  }
+}
+article {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: 100vh;
+
+  box-sizing: border-box;
+  > header {
+    position: relative;
+    height: 48px;
+    font-size: 28.8px;
+    border: solid 1px black;
+    max-width: 50%;
+  }
+}
+#skills-tab {
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 60px;
+
+  > i {
+    margin: 5px;
+    font-size: larger;
+  }
+}
+#linkedin {
+  color: #0072b1;
+  &:hover {
+    color: black;
+  }
+}
+#youtube {
+  color: red;
+  &:hover {
+    color: black;
+  }
+}
+#twitter {
+  color: #00aced;
+  &:hover {
+    color: black;
+  }
+}
+#github {
+  color: #333;
+  &:hover {
+    color: black;
+  }
+}
+.social-box {
+  > a {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 24px;
+    text-decoration: none;
+  }
+}
+#windows-button {
+  font-family: "MS Sans Serif";
+  font-size: 11px;
+  font-weight: 500;
+  outline: 1px solid #000000;
+  background: #c0c0c0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 4px 10px;
+  color: #000000;
+  bottom: 0px;
+  &:active {
+    background-color: #999999;
+    border-bottom-width: 0px;
+    transform: translateY(4px);
+  }
+  > img {
+    width: 11px;
+    height: 11px;
+    margin-bottom: 4px;
+  }
+}
+#supreme-button {
+  font-family: "supreme";
+  font-size: 11px;
+  font-stretch: expanded;
+  background: red;
+  outline: 1px solid black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffa1a1 rgb(172, 0, 0) rgb(172, 0, 0) #ffa1a1;
+  padding: 4px 10px;
+  color: white;
+  &:active {
+    background-color: #b80000;
+    border-bottom-width: 0px;
+    transform: translateY(4px);
+  }
+}
+.card {
+  height: 100%;
+
+  border-radius: 0.25em;
+  transition: all ease-in-out 0.75s;
+  // border: solid 2px orange;
+}
+@media screen and (min-width: 991px) {
+  article {
+    margin-top: 25px;
+    max-width: 100%;
+    padding: 0;
+    height: 100%;
+  }
+  .card {
+    height: 100%;
+  }
+}
+
+.messages {
+  margin: 10px;
+  border: solid 1px white;
+  max-width: 50%;
+  height: 300px;
+}
+.footer {
+  position: relative;
+  margin: 25px;
+  font-size: 18px;
+}
+table {
+  margin-top: 48px;
+  button {
+    font-size: 21.6px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #b2b2b2;
+    border: solid 3px #b2b2b2;
+    margin-right: 10px;
+  }
+}
+// Menu Button
+
+.menu-btn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  margin: 25px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.menu-btn-burger {
+  z-index: 1;
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.5s;
+  box-shadow: 0 2px 5px rgba(255, 101, 80, 0.5);
+}
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 30px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(255, 101, 80, 0.5);
+}
+.menu-btn-burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn-burger::after {
+  transform: translateY(16px);
+}
+/* Animation */
+
+.menu-btn.open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+//
+// Overlay
+.overlay {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: orange;
+  z-index: 4;
+  transition: width ease-in-out 0.75s;
+}
+.show {
+  display: flex;
+  animation-name: appear;
+  animation-duration: 0.75s;
+  transition: ease-in-out;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
