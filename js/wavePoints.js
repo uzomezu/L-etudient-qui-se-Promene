@@ -1,6 +1,6 @@
 var SEPARATION = 100,
-  AMOUNTX = 50,
-  AMOUNTY = 50;
+  AMOUNTX = 100,
+  AMOUNTY = 100;
 
 var container, stats;
 var camera, scene, renderer;
@@ -135,8 +135,8 @@ function animate() {
 }
 
 function render() {
-  camera.position.x += (mouseX - camera.position.x) * 0.05;
-  camera.position.y += (-mouseY - camera.position.y) * 0.05;
+  camera.position.x += (mouseX - camera.position.x) * 0.025;
+  camera.position.y += (-mouseY - camera.position.y) * 0.025;
   camera.lookAt(scene.position);
 
   var positions = particles.geometry.attributes.position.array;
@@ -151,8 +151,8 @@ function render() {
         Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
 
       scales[j] =
-        (Math.sin((ix + count) * 0.3) + 1) * 8 +
-        (Math.sin((iy + count) * 0.5) + 1) * 8;
+        (Math.sin((ix + count) * 0.3) + 1) * 10 +
+        (Math.sin((iy + count) * 0.5) + 1) * 10;
 
       i += 3;
       j++;

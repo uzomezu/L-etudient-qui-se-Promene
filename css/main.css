@@ -27,6 +27,9 @@ canvas {
 .threeDscene {
   opacity: 0;
 }
+.form-control {
+  background: rgba(255, 255, 255, 0.3);
+}
 .parralax {
   background-image: url(../grainy_Kevin.png);
   background-attachment: fixed;
@@ -181,7 +184,7 @@ canvas {
   transform: scale3d(-100px, -100px, -100px);
 }
 .article-content p {
-  font-size: 18px;
+  font-size: 24px;
 }
 .article-content:nth-last-child(n) {
   max-width: 768px;
