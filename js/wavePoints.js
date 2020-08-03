@@ -135,8 +135,8 @@ function animate() {
 }
 
 function render() {
-  camera.position.x += (mouseX - camera.position.x) * 0.025;
-  camera.position.y += (-mouseY - camera.position.y) * 0.025;
+  camera.position.x += (mouseX - camera.position.x) * 0.05;
+  camera.position.y += (-mouseY - camera.position.y) * 0.05;
   camera.lookAt(scene.position);
 
   var positions = particles.geometry.attributes.position.array;
