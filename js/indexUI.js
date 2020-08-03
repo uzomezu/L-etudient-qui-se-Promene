@@ -7,6 +7,7 @@
   const projects = document.getElementById("projects");
   const arrowSymbol = document.querySelector(".fa-arrow-down");
   const overLayLinks = document.querySelectorAll(".overlay-Link");
+  const threeScene = document.querySelector(".threeDscene");
   let opacity = 0;
   let menuOpen = false;
   let projListItems = projects.getElementsByTagName("li");
@@ -122,6 +123,7 @@
       opacity = 1;
     }
     img.style.opacity = `${opacity}`;
+    threeScene.style.opacity = `${opacity}`;
     arrowSymbol.style.opacity = `${1 - opacity}`;
     home.style.opacity = `${1 - opacity}`;
     // console.log(top_Of_Div, bottom_Of_Div);
