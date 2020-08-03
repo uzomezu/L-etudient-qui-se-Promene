@@ -88,7 +88,7 @@ canvas {
   font-size: larger;
 }
 .social-box {
-  font-size: 25px;
+  font-size: 35px;
 }
 .social-box a {
   color: grey;
@@ -152,6 +152,7 @@ canvas {
   max-width: 100%;
   list-style-type: none;
   font-size: 25px;
+  background: inherit;
 }
 #projects li,
 #gallery li {
@@ -321,7 +322,7 @@ footer {
 }
 .overlay-Link {
   background: none;
-  font-size: 25px;
+  font-size: 40px;
   text-decoration: none;
   color: inherit;
   transition: all 0.25s ease-in-out;
