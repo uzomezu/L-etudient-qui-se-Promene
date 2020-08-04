@@ -12,6 +12,10 @@ body {
   transition: all 0.5s ease-in-out;
   font-weight: bolder;
 }
+@font-face {
+  font-family: "aura";
+  src: url(../fonts/Aura-Regular.otf) format("opentype");
+}
 b {
   color: red;
 }
@@ -177,11 +181,20 @@ canvas {
 }
 .article-content {
   padding: 20px;
+  font-family: monospace;
   position: relative;
   transition: all 0.75s ease-in-out;
   width: 100%;
   min-height: 70vh;
   transform: scale3d(-100px, -100px, -100px);
+}
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+  font-family: "aura";
+}
+.article-content .content-heading {
+  letter-spacing: 5px;
 }
 .article-content p {
   font-size: 20px;
