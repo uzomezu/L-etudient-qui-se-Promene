@@ -131,7 +131,7 @@ function animate() {
   requestAnimationFrame(animate);
 
   render();
-  stats.update();
+  //stats.update();
 }
 
 function render() {
