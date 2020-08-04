@@ -184,7 +184,7 @@ canvas {
   transform: scale3d(-100px, -100px, -100px);
 }
 .article-content p {
-  font-size: 24px;
+  font-size: 20px;
 }
 .article-content:nth-last-child(n) {
   max-width: 768px;
