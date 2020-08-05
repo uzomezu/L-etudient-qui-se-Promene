@@ -1,6 +1,6 @@
-var SEPARATION = 100,
-  AMOUNTX = 100,
-  AMOUNTY = 100;
+var SEPARATION = 250,
+  AMOUNTX = 25,
+  AMOUNTY = 25;
 
 var container, stats;
 var camera, scene, renderer;
@@ -13,6 +13,9 @@ var mouseX = 0,
 
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
+
+const lightBtn = document.getElementById("lights");
+const body = document.getElementById("body");
 
 init();
 animate();
@@ -44,7 +47,7 @@ function init() {
   for (var ix = 0; ix < AMOUNTX; ix++) {
     for (var iy = 0; iy < AMOUNTY; iy++) {
       positions[i] = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2; // x
-      positions[i + 1] = 0; // y
+      positions[i + Math.random()] = 0; // y
       positions[i + 2] = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2; // z
 
       scales[j] = 1;
@@ -60,14 +63,14 @@ function init() {
 
   var material = new THREE.ShaderMaterial({
     uniforms: {
-      color: { value: new THREE.Color(0xff0000) },
+      color: { value: new THREE.Color(0x0ff000) },
     },
     vertexShader: document.getElementById("vertexshader").textContent,
     fragmentShader: document.getElementById("fragmentshader").textContent,
   });
-
   //
-
+  // let num = Math.random();
+  // material.uniforms.color.value = { r: num, g: num, b: num };
   particles = new THREE.Points(geometry, material);
   scene.add(particles);
 
@@ -129,7 +132,6 @@ function onDocumentTouchMove(event) {
 
 function animate() {
   requestAnimationFrame(animate);
-
   render();
   //stats.update();
 }
