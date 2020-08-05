@@ -183,6 +183,7 @@ canvas {
   padding: 20px;
   font-family: monospace;
   position: relative;
+  background: radial-gradient(rgba(0, 0, 0, 0.3), transparent 95%);
   transition: all 0.75s ease-in-out;
   width: 100%;
   min-height: 70vh;
@@ -201,6 +202,8 @@ canvas {
 }
 .article-content:nth-last-child(n) {
   max-width: 768px;
+  padding-right: auto;
+  padding-left: auto;
 }
 .article-content a {
   position: relative;

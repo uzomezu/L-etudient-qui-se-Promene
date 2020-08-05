@@ -1,6 +1,6 @@
-var SEPARATION = 250,
-  AMOUNTX = 25,
-  AMOUNTY = 25;
+var SEPARATION = 100,
+  AMOUNTX = 50,
+  AMOUNTY = 50;
 
 var container, stats;
 var camera, scene, renderer;
@@ -153,8 +153,8 @@ function render() {
         Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
 
       scales[j] =
-        (Math.sin((ix + count) * 0.3) + 1) * 10 +
-        (Math.sin((iy + count) * 0.5) + 1) * 10;
+        (Math.sin((ix + count) * 0.3) + 1) * 5 +
+        (Math.sin((iy + count) * 0.5) + 1) * 5;
 
       i += 3;
       j++;
