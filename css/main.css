@@ -34,10 +34,6 @@ canvas {
 .form-control {
   background: rgba(255, 255, 255, 0.3);
 }
-.parralax {
-  background-image: url(../grainy_Kevin.png);
-  background-attachment: fixed;
-}
 .parralax::after {
   content: "";
   width: 100%;
@@ -45,8 +41,10 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(120deg, teal, purple, transparent);
-  opacity: 0.5;
+  background-image: url(../grainy_Kevin.png);
+  background-attachment: fixed;
+  background-color: inherit;
+  opacity: 1;
   background-blend-mode: hue;
   z-index: -1;
 }
@@ -177,12 +175,12 @@ canvas {
 }
 .core-projects .card {
   margin: 5px;
+  padding: 2px;
   width: 18rem;
   border-width: 4px;
   border-style: solid;
   border-color: inherit;
-  color: inherit;
-  background-color: inherit;
+  color: black;
   margin-left: auto;
   margin-right: auto;
 }
@@ -191,7 +189,7 @@ canvas {
     flex-direction: row;
   }
   .core-projects .card {
-    margin: 20px;
+    margin: 10px;
     width: 32rem;
   }
 }
@@ -226,6 +224,7 @@ canvas {
 }
 .article-content a {
   position: relative;
+  color: inherit;
   margin: 5px;
   text-decoration: none;
   transition: all 0.75s ease-in-out;
@@ -235,7 +234,7 @@ canvas {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 5px;
+  height: 2px;
   background: red;
   width: 0;
   transform: scale(0);

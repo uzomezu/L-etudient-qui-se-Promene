@@ -59,25 +59,25 @@
     }
     img.style.opacity = `${opacity}`;
 
-    threeScene.style.opacity = `${1 - opacity}`;
+    //threeScene.style.opacity = `${1 - opacity}`;
 
     arrowSymbol.style.opacity = `${1 - opacity}`;
     home.style.opacity = `${1 - opacity}`;
   });
   // Dark/Light UI
-  const lights = document.getElementById("lights");
-  const body = document.getElementById("body");
-  //*** NOTE TO SELF": Do something here so the UI stays the same after the page has been reloaded
-  lights.addEventListener("click", function () {
-    if (body.classList.contains("light-mode")) {
-      body.classList.add("dark-mode");
-      body.classList.remove("light-mode");
-      img.src = "KM_Logo_black.png";
-    } else {
-      body.classList.add("light-mode");
-      body.classList.remove("dark-mode");
-      img.src = "KM_Logo_white.png";
-    }
-  });
-  //
+  // const lights = document.getElementById("lights");
+  // const body = document.getElementById("body");
+  // //*** NOTE TO SELF": Do something here so the UI stays the same after the page has been reloaded
+  // lights.addEventListener("click", function () {
+  //   if (body.classList.contains("light-mode")) {
+  //     body.classList.add("dark-mode");
+  //     body.classList.remove("light-mode");
+  //     img.src = "KM_Logo_black.png";
+  //   } else {
+  //     body.classList.add("light-mode");
+  //     body.classList.remove("dark-mode");
+  //     img.src = "KM_Logo_white.png";
+  //   }
+  // });
+  // //
 })();

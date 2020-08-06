@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./favicon.png" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- Fontawesome -->
     <link
       rel="stylesheet"
@@ -17,7 +18,7 @@
   </head>
   <body
     id="body"
-    class="dark-mode d-flex justify-content-center flex-column align-items-center"
+    class="light-mode d-flex justify-content-center flex-column align-items-center"
   >
     <!-- Navigation and Fixed Elements -->
 
@@ -33,9 +34,9 @@
     </div>
     <!--  -->
     <!-- Lights -->
-    <button class="" id="lights">
+    <!-- <button class="" id="lights">
       <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-    </button>
+    </button> -->
     <!--  -->
     <!-- UI Indicate User Scroll -->
     <span class="scroll-arrow"
@@ -53,8 +54,10 @@
       <div class="core-projects">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <h5 class="card-title">
+              Todo List <i class="fab fa-react"></i> <i class="fab fa-css3"></i>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">React App</h6>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -63,13 +66,15 @@
             <a href="#" class="card-link">Repo</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card d-flex align-items-around">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <h5 class="card-title">
+              MERN Blog <i class="fab fa-js"></i> <i class="fab fa-css3"></i>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">My Nursing Story</h6>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              A MERN stack blog launching in Fall 2020 to help with the COVID-19
+              pandemic response.
             </p>
             <a href="#" class="card-link">Live</a>
             <a href="#" class="card-link">Repo</a>
@@ -77,8 +82,10 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <h5 class="card-title">
+              Ecommerce <i class="fab fa-js"></i> <i class="fab fa-node"></i>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Upper Echelon</h6>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -160,30 +167,53 @@
       </div>
     </section>
     <section class="article-content parralax" id="about">
-      <h1 class="text-center content-heading m-0">
-        About
-        <!-- <img
-          id="kevin-float"
-          src="./grainy_Kevin.png"
-          height="64"
-          alt="Kevin Ellington Mezu"
-        />! -->
-      </h1>
-      <h3>Who?/Qui?</h3>
-      <p class="py-3">
-        Kevin Mezu, React Developer and FullStack Aspirant from Baltimore, MD.
-        USA
-      </p>
-      <h3>What?Quoi?</h3>
-      <p class="py-3">
-        I am
-        <b>L'etudiant qui se promene</b> which literally means
-        <b>the student who walks</b>. I started writing scripts in the notepad
-        apps of my iPhone and tablet as a beginner. And through that I've
-        learned sometimes the best education happens outside the classroom.
-      </p>
+      <div class="card" style="max-width: 100%; margin: 0;">
+        <img
+          src="./KM_Logo.png"
+          alt="profile-pic"
+          class="card-img-top"
+          id="img-top"
+        />
+
+        <div class="card-body">
+          <h5 class="card-title">Kevin Mezu</h5>
+          <p class="card-text h5">
+            My name is Kevin! A React Developer and FullStack aspirant, I study
+            in the department of Computer Studies at UMGC with a 3.5 GPA. I
+            expect to graduate in Fall 2020 with a BS in Digital Media and Web
+            Technology.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <!-- <li id="skills-tab" class="list-group-item d-flex">
+            <div>Skills and Tech:</div>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-less"></i>
+            <div>Rest API/Web API</div>
+          </li> -->
+          <li class="list-group-item h6">
+            Interests: Health, Cloud Computing, Wearable Tech
+          </li>
+          <!-- <li class="list-group-item d-flex justify-content-center">
+            <a id="windows-button" href="#" class="card-link"
+              ><img src="./photos/Windows_Logo_1995.svg" alt="" /> Projects</a
+            >
+            <button id="supreme-button" href="#" class="gallery card-link">
+              Gallery
+            </button>
+            <a href="#" class="card-link">About Me -></a>
+          </li> -->
+          <li class="list-group-item d-flex justify-content-around">
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-less"></i>
+            <div>Rest API/Web API</div>
+          </li>
+        </ul>
+      </div>
     </section>
-    <!-- <section id="contact" class="article-content">
+    <section id="contact" class="article-content">
       <div class="d-flex flex-column col-md pt-6">
         <h3 class="text-center content-heading">Follow me/Suivez-moi</h3>
         <div class="d-flex justify-content-center social-box">
@@ -226,7 +256,7 @@
         </div>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
-    </section> -->
+    </section>
 
     <div class="overlay">
       <a class="overlay-Link" href="" target="#about">About</a>
