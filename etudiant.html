@@ -44,48 +44,58 @@
     <!--  -->
 
     <!-- End of Navigation -->
-
-    <section id="home" class="scene parralax">
+    <section id="home" class="scene">
       <span id="title">l’étudiant qui se promene</span>
     </section>
-    <section class="article-content" id="about">
-      <h3 class="text-center content-heading">
-        Hello, my name is
-        <img
-          id="kevin-float"
-          src="./grainy_Kevin.png"
-          height="48"
-          alt="Kevin Ellington Mezu"
-        />!
-      </h3>
-      <p class="py-3">
-        My name is Kevin Mezu. I am a Front End Software Developer, but thats
-        really a fancy way of saying I do techy stuff to fit your design needs.
-      </p>
-      <p class="py-3">
-        The title of this portfolio is
-        <b>L'etudiant qui se promene</b> which literally means
-        <b>the student who walks</b>.
-      </p>
-      <p class="py-3">
-        I started writing scripts in the notepad apps of my iPhone and tablet as
-        a beginner. And through that I've learned sometimes the best education
-        happens outside the classroom.
-      </p>
-      <p class="py-3">
-        Powered by VS Code, <b style="color: aqua;">React.js</b>,
-        <b style="color: gold;">JavaScript</b> and Web API's, people come to me
-        with their development problems, and I provide fast and scalable
-        solutions. Feel free to look at my coding projects and image editing
-        below.
-      </p>
+
+    <section class="article-content parralax">
+      <div class="header mx-auto text-center"><h1>Projects</h1></div>
+      <div class="core-projects">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Live</a>
+            <a href="#" class="card-link">Repo</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Live</a>
+            <a href="#" class="card-link">Repo</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="card-link">Live</a>
+            <a href="#" class="card-link">Repo</a>
+          </div>
+        </div>
+      </div>
+      <div class="more-projects"></div>
     </section>
     <section class="article-content">
       <h3 class="text-center text-uppercase content-heading">
-        Current Projects
+        More Work
       </h3>
       <div class="d-flex flex-column col-md">
-        <ol id="projects" style="width: 100%;">
+        <ol class="d-flex flex-column" id="projects" style="width: 100%;">
           <li>
             <a href="http://mynursingstory.com/" target="_blank"
               >My Nursing Story</a
@@ -121,18 +131,13 @@
               >Ticket Purchase App</a
             >
           </li>
-          <!-- <li>
-            <a
-              href="https://uzomezu.github.io/project-a-Day/6-30_Day8/TrafficLight/index.html"
-              target="_blank"
-              >3D Orbit Controls</a
-            >
-          </li> -->
         </ol>
       </div>
       <div class="d-flex flex-column col-md">
-        <h3 class="text-center text-uppercase content-heading">Artwork</h3>
-        <ol id="gallery">
+        <h3 class="text-center text-uppercase content-heading">
+          Image Editing
+        </h3>
+        <ol id="gallery" class="d-flex flex-column">
           <li>
             <a
               href="./photos/CMST325-P1-Movie-Poster-Template-v1.jpg"
@@ -154,7 +159,31 @@
         </ol>
       </div>
     </section>
-    <section id="contact" class="article-content">
+    <section class="article-content parralax" id="about">
+      <h1 class="text-center content-heading m-0">
+        About
+        <!-- <img
+          id="kevin-float"
+          src="./grainy_Kevin.png"
+          height="64"
+          alt="Kevin Ellington Mezu"
+        />! -->
+      </h1>
+      <h3>Who?/Qui?</h3>
+      <p class="py-3">
+        Kevin Mezu, React Developer and FullStack Aspirant from Baltimore, MD.
+        USA
+      </p>
+      <h3>What?Quoi?</h3>
+      <p class="py-3">
+        I am
+        <b>L'etudiant qui se promene</b> which literally means
+        <b>the student who walks</b>. I started writing scripts in the notepad
+        apps of my iPhone and tablet as a beginner. And through that I've
+        learned sometimes the best education happens outside the classroom.
+      </p>
+    </section>
+    <!-- <section id="contact" class="article-content">
       <div class="d-flex flex-column col-md pt-6">
         <h3 class="text-center content-heading">Follow me/Suivez-moi</h3>
         <div class="d-flex justify-content-center social-box">
@@ -197,8 +226,8 @@
         </div>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
-    </section>
-    <span class="h6 text-center p-6">Made with THREE.js</span>
+    </section> -->
+
     <div class="overlay">
       <a class="overlay-Link" href="" target="#about">About</a>
       <a class="overlay-Link" href="" target="#projects">Projects</a>

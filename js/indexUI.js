@@ -3,6 +3,7 @@
   const overlay = document.querySelector(".overlay");
   const img = document.getElementById("img");
   const home = document.querySelector("#home");
+  const bodyDoc = document.getElementById("body");
   const card = document.querySelector(".card");
   const projects = document.getElementById("projects");
   const arrowSymbol = document.querySelector(".fa-arrow-down");
@@ -38,51 +39,7 @@
       });
     });
   });
-  // Scroll Animations
-  // helper function to find current position of window
-  // isElementInViewport = function (el) {
-  //   let rect = el.getBoundingClientRect();
-  //   return (
-  //     (rect.top <= 0 && rect.bottom >= 0) ||
-  //     (rect.bottom >=
-  //       (window.innerHeight || document.documentElement.clientHeight) &&
-  //       rect.top <=
-  //         (window.innerHeight || document.documentElement.clientHeight)) ||
-  //     (rect.top >= 0 &&
-  //       rect.bottom <=
-  //         (window.innerHeight || document.documentElement.clientHeight))
-  //   );
-  // };
-  // const scroll = requestAnimationFrame;
-  // function loop() {
-  //   projListItems.forEach(function (element) {
-  //     if (isElementInViewport(element)) {
-  //       element.classList.add("is-visible");
-  //     } else {
-  //       element.classList.remove("is-visible");
-  //     }
-  //   });
-
-  //   scroll(loop);
-  // }
   let rect = projects.getBoundingClientRect();
-  // function isElementInViewport(el) {
-  //   // special bonus for those using jQuery
-  //   if (typeof jQuery === "function" && el instanceof jQuery) {
-  //     el = el[0];
-  //   }
-  //   var rect = el.getBoundingClientRect();
-  //   return (
-  //     (rect.top <= 0 && rect.bottom >= 0) ||
-  //     (rect.bottom >=
-  //       (window.innerHeight || document.documentElement.clientHeight) &&
-  //       rect.top <=
-  //         (window.innerHeight || document.documentElement.clientHeight)) ||
-  //     (rect.top >= 0 &&
-  //       rect.bottom <=
-  //         (window.innerHeight || document.documentElement.clientHeight))
-  //   );
-  // }
 
   const topProj = rect.top;
   const bottomProj = rect.bottom;
@@ -92,41 +49,20 @@
   }
   sessionStorage.setItem("top", topProj);
   sessionStorage.setItem("bottom", bottomProj);
-  // function loop() {
-  //   projListItems.forEach(function (element) {
-  //     if (isElementInViewport(element)) {
-  //       console.log("in Da Projectz");
-  //     } else {
-  //       console.log("out the projects");
-  //     }
-  //   });
-  //   requestAnimationFrame(loop);
-  // }
   console.log(topProj, bottomProj);
   window.addEventListener("scroll", function () {
-    let y = scrollY + y_Start;
     animate();
-    let top_Of_Div = sessionStorage.getItem("top");
-    let bottom_Of_Div = sessionStorage.getItem("bottom");
-    if (y > top_Of_Div && y < bottom_Of_Div) {
-      console.log("we in the projects", scrollY);
-      for (i = 0; i < projListItems.length; i++) {
-        projListItems[i].classList.add("ripple");
-        projListItems[i].style.animationDelay = `${
-          i / projListItems.length + 0.24
-        }s`;
-      }
-    }
     if (scrollY < innerHeight) {
       opacity = scrollY / (innerHeight / 3);
     } else {
       opacity = 1;
     }
     img.style.opacity = `${opacity}`;
-    threeScene.style.opacity = `${opacity}`;
+
+    threeScene.style.opacity = `${1 - opacity}`;
+
     arrowSymbol.style.opacity = `${1 - opacity}`;
     home.style.opacity = `${1 - opacity}`;
-    // console.log(top_Of_Div, bottom_Of_Div);
   });
   // Dark/Light UI
   const lights = document.getElementById("lights");

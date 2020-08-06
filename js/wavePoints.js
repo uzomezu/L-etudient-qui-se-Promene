@@ -123,8 +123,8 @@ function onDocumentTouchMove(event) {
   if (event.touches.length === 1) {
     event.preventDefault();
 
-    mouseX = event.touches[0].pageX - windowHalfX;
-    mouseY = event.touches[0].pageY - windowHalfY;
+    mouseX = event.touches[0].pageX - windowHalfX * 0.8;
+    mouseY = event.touches[0].pageY - windowHalfY * 0.8;
   }
 }
 
@@ -153,7 +153,7 @@ function render() {
         Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
 
       scales[j] =
-        (Math.sin((ix + count) * 0.3) + 1) * 5 +
+        (Math.sin((ix + count) * 0.3) + 1) * 8 +
         (Math.sin((iy + count) * 0.5) + 1) * 5;
 
       i += 3;
