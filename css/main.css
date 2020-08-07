@@ -229,6 +229,9 @@ canvas {
 .article-content:nth-last-child(n) {
   max-width: 850px;
 }
+.article-content .social:hover {
+  transform: scale(1.1);
+}
 .article-content a {
   position: relative;
   color: inherit;
@@ -237,7 +240,7 @@ canvas {
   transition: all 0.2s ease-in-out;
 }
 .article-content a:hover {
-  font-size: 18px;
+  transform: scale(1.2);
 }
 .article-content a::after {
   content: "";

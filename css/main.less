@@ -253,7 +253,11 @@ canvas {
   &:nth-last-child(n) {
     max-width: 850px;
   }
-
+  .social {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
   a {
     position: relative;
     color: inherit;
@@ -261,8 +265,9 @@ canvas {
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     &:hover {
-      font-size: 18px;
+      transform: scale(1.2);
     }
+
     &::after {
       content: "";
       position: absolute;

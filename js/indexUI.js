@@ -15,16 +15,24 @@
   console.log(projects.querySelectorAll("a"));
   aLinks.forEach(function (link) {
     link.addEventListener("mouseover", () => {
-      if (!link.classList.contains("social")) {
+      if (
+        !link.classList.contains("social") &&
+        !link.classList.contains("overlay-Link")
+      ) {
+        let snd = new Audio("../sounds/spacey-cricket-click.wav");
+        snd.play();
+      } else if (link.classList.contains("overlay-Link")) {
         let snd = new Audio("../sounds/pop-click.wav");
         snd.play();
       }
       console.log(snd);
     });
     link.addEventListener("click", () => {
-      let audio = new Audio("../sounds/button-confirm-spacey.wav");
-      audio.play();
-      console.log(audio);
+      if (!link.classList.contains("social")) {
+        let audio = new Audio("../sounds/button-confirm-spacey.wav");
+        audio.play();
+        console.log(audio);
+      }
     });
   });
   //Open Menu Hamburger to X
@@ -59,7 +67,7 @@
   }
   window.addEventListener("scroll", function () {
     if (scrollY < innerHeight) {
-      opacity = scrollY / (innerHeight / 3);
+      opacity = (scrollY / innerHeight) * 1.2;
     } else {
       opacity = 1;
     }
