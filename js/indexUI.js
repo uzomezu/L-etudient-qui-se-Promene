@@ -19,10 +19,12 @@
         let snd = new Audio("../sounds/pop-click.wav");
         snd.play();
       }
+      console.log(snd);
     });
     link.addEventListener("click", () => {
       let audio = new Audio("../sounds/button-confirm-spacey.wav");
       audio.play();
+      console.log(audio);
     });
   });
   //Open Menu Hamburger to X
@@ -68,4 +70,10 @@
     arrowSymbol.style.opacity = `${1 - opacity}`;
     home.style.opacity = `${1 - opacity}`;
   });
+
+  //Form Submission
+  const form = document.getElementById("myForm");
+  // form.addEventListener("onsubmit", ()=>{
+
+  // })
 })();

@@ -94,7 +94,7 @@
               A MERN stack blog launching in Fall 2020 to help with the COVID-19
               pandemic response.
             </p>
-            <div>
+            <div class="card-text">
               <a
                 href="http://mynursingstory.com/"
                 target="_blank"
@@ -142,7 +142,7 @@
         </div>
       </div>
     </section>
-    <section class="article-content">
+    <section class="article-content d-flex flex-column justify-content-center">
       <h3 class="text-center text-uppercase content-heading">
         More Work
       </h3>
@@ -283,30 +283,46 @@
         </div>
       </div>
       <h4 class="">contact</h4>
-      <form class="py-1 mx-auto" style="max-width: 768px;">
+      <form
+        action="mailto:kmezu1@student.umgc.edu?subject=subject"
+        class="py-1 mx-auto"
+        id="myForm"
+        method="GET"
+        style="max-width: 768px;"
+      >
         <div class="form-group">
           <label for="exampleFormControlInput1">Name / Orginization</label>
           <input
-            type="name"
+            type="text"
+            name="name"
             class="form-control"
             id="formName"
             placeholder="Jane Doe"
+            value=""
           />
         </div>
         <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
+          <label for="exampleFormControlInput1">Subject</label>
           <input
-            type="email"
+            type="text"
+            name="subject"
             class="form-control"
-            id="formEmail"
-            placeholder="name@example.com"
+            id="FormSubject"
+            placeholder="References/Let's Talk!"
+            value=""
           />
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Comments</label>
-          <textarea class="form-control" id="formTextarea" rows="3"></textarea>
+          <p>
+            References and profressional documents are availible on request.
+            Please fill in your <b>Subject</b> or reason for contact, and your
+            <b>Name/Orginization</b> at your descretion. Then, by clicking the
+            submit button below I will receive your email. Thank you.
+          </p>
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit">
+          Submit <i class="fa fa-envelope"></i>
+        </button>
       </form>
     </section>
 
@@ -319,10 +335,12 @@
     <div class="threeDscene"></div>
     <footer>
       Copyright &#169; 2020 - 2021 l'Etudiant qui se Promene Kevin Mezu
-      <a href="tel:410-504-9362"><i class="fa fa-phone"></i></a>
-      <a href="mailto:kmezu1@student.umgc.edu"
-        ><i class="fa fa-envelope"></i>
-      </a>
+      <br />
+      <span
+        ><a href="./privacypolicy.html" class="card-link"
+          >Privacy Policy/ Terms Conditions</a
+        ></span
+      >
     </footer>
 
     <script type="x-shader/x-vertex" id="vertexshader">

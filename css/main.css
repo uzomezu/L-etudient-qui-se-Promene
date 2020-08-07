@@ -181,8 +181,13 @@ canvas {
   border-style: solid;
   border-color: inherit;
   color: black;
+  box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.3);
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.25s ease-in-out;
+}
+.core-projects .card:hover {
+  transform: scale(1.05);
 }
 @media screen and (min-width: 991px) {
   .core-projects {
@@ -229,7 +234,10 @@ canvas {
   color: inherit;
   margin: 5px;
   text-decoration: none;
-  transition: all 0.75s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.article-content a:hover {
+  font-size: 18px;
 }
 .article-content a::after {
   content: "";
@@ -278,8 +286,10 @@ canvas {
 }
 footer {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 25px;
+  height: 50px;
   text-align: center;
   margin: 25px;
 }
