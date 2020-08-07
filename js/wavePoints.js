@@ -61,13 +61,20 @@ function init() {
   geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
   geometry.setAttribute("scale", new THREE.BufferAttribute(scales, 1));
 
+  let texture = new THREE.TextureLoader().load("../grainy_Kevin.png");
+  let materialTwo = new THREE.MeshBasicMaterial({ map: texture });
   var material = new THREE.ShaderMaterial({
     uniforms: {
+      time: { value: 1 },
       color: { value: new THREE.Color(0x000000) },
     },
     vertexShader: document.getElementById("vertexshader").textContent,
     fragmentShader: document.getElementById("fragmentshader").textContent,
+    wireframe: true,
+    vertexColors: true,
+    skinning: true,
   });
+
   //
   // let num = Math.random();
   // material.uniforms.color.value = { r: num, g: num, b: num };

@@ -59,7 +59,7 @@
     }
     img.style.opacity = `${opacity}`;
 
-    //threeScene.style.opacity = `${1 - opacity}`;
+    threeScene.style.opacity = `${1 - opacity}`;
 
     arrowSymbol.style.opacity = `${1 - opacity}`;
     home.style.opacity = `${1 - opacity}`;
