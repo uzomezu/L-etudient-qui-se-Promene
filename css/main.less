@@ -207,6 +207,7 @@ canvas {
     margin-right: auto;
   }
 }
+
 @media screen and (min-width: 991px) {
   .core-projects {
     flex-direction: row;
@@ -229,6 +230,8 @@ canvas {
   h3 {
     font-family: "aura";
   }
+  scroll-snap-type: proximity;
+
   border-width: 4px;
   border-style: solid;
   border-color: inherit;
@@ -238,8 +241,9 @@ canvas {
   //background: radial-gradient(rgba(0, 0, 0, 0.3), transparent 95%);
   transition: all 0.75s ease-in-out;
   width: 100%;
-  min-height: auto;
+  min-height: 100vh;
   margin: 10px;
+  margin-bottom: 10vh;
   margin-left: 10px;
   margin-right: 10px;
   &:nth-last-child(n) {
