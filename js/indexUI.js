@@ -67,7 +67,7 @@
   }
   window.addEventListener("scroll", function () {
     if (scrollY < innerHeight) {
-      opacity = (scrollY / innerHeight) * 1.2;
+      opacity = scrollY / (innerHeight * 1.2);
     } else {
       opacity = 1;
     }

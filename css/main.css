@@ -215,7 +215,7 @@ canvas {
   position: relative;
   transition: all 0.75s ease-in-out;
   width: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
   margin: 10px;
   margin-bottom: 10vh;
   margin-left: 10px;
